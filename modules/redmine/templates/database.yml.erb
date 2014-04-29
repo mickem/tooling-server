@@ -1,0 +1,15 @@
+production:
+  adapter: <%= scope.lookupvar('redmine_dbtype') %>
+  database: <%= scope.lookupvar('redmine_dbname') %>
+  username: <%= scope.lookupvar('redmine_dbuser') %>
+  password: <%= scope.lookupvar('redmine_dbpwd') %>
+  host: <%= scope.lookupvar('redmine_dbhost') %>
+  encoding: utf8
+
+#development:
+#  adapter: <%= scope.lookupvar('redmine_dbtype') %>
+#  database: <%= scope.lookupvar('redmine_dbname') %>
+#  username: <%= scope.lookupvar('redmine_dbuser') %>
+#  password: <%= scope.lookupvar('redmine_dbpwd') %>
+#  host: <%= scope.lookupvar('redmine_dbhost') %>
+#  encoding: utf8

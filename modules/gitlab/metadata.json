@@ -1,0 +1,47 @@
+{
+  "name": "sbadia-gitlab",
+  "version": "0.1.3",
+  "source": "https://github.com/sbadia/puppet-gitlab",
+  "author": "Andrew Tomaka, Steffen Roegner, Igor Galic, Uwe Kleinmann, Matt Klich, Sebastien Badia",
+  "license": "GPLv3",
+  "summary": "Puppet GitLab Module",
+  "description": "Module to install GitLab using puppet",
+  "project_page": "https://github.com/sbadia/puppet-gitlab/",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.1.0"
+    },
+    {
+      "name": "puppetlabs/vcsrepo",
+      "version_requirement": ">= 0.2.0"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "CHANGELOG": "5765870304e730208f783fbbfc0cceba",
+    "LICENSE": "d32239bcb673463ab874e80d47fae504",
+    "Modulefile": "dd2dc7779322e33e1495834759212955",
+    "README.md": "7d9f584bad4bd6f6ee8c7e6e9533cb71",
+    "manifests/config.pp": "52ede1c297fda6b8bb618cdb0393d7d5",
+    "manifests/init.pp": "d3fe9f08a6a22543eaf0af347bb54844",
+    "manifests/install.pp": "fd47867149ca584726d43df79fbff5fc",
+    "manifests/package.pp": "b6dc577a876aa73b02c00f2fd9ed17fc",
+    "manifests/params.pp": "268a54af8d097dee14423b7c7ea834a0",
+    "manifests/service.pp": "edf682ffe177a429a0fdebb6ad27385a",
+    "manifests/setup.pp": "16ed5a7234520364a2426a27898ea6fe",
+    "templates/application.rb.erb": "84378e9fc12f5c389ff20be900d31a8b",
+    "templates/backup-gitlab.sh.erb": "64194acd1cc4321d7397409d1b3f2a4b",
+    "templates/database.yml.erb": "155e5e8df0d8cbb9b2d91ffced38f0a5",
+    "templates/git.gitconfig.erb": "b0eb5669708408c4463fc0236cf551f7",
+    "templates/gitlab-shell.config.yml.erb": "c76c2ff7a5b004528d98ede30ebed1df",
+    "templates/gitlab.default.erb": "67f4eb56796de102d112e1df4f99e159",
+    "templates/gitlab.yml.erb": "37b4517a992dfc7203b551b4bbbe30d6",
+    "templates/nginx-gitlab.conf.erb": "c673121c5850a0f191c53e695e989495",
+    "templates/resque.yml.erb": "6dbedd8bc7f854747ce92a0c97cb60fa",
+    "templates/unicorn.rb.erb": "c359b0b9531e6209eeb0ce52b2b07598",
+    "tests/init.pp": "47283790c73e932617f9ab23824b5574"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "johanek-redmine",
+  "version": "0.0.2",
+  "source": "UNKNOWN",
+  "author": "johanek",
+  "license": "Apache License, Version 2.0",
+  "summary": "Module to install redmine",
+  "description": "This module will install redmine, running behind apache and passenger, and backed by mysql",
+  "project_page": "https://github.com/johanek/johanek-redmine",
+  "dependencies": [
+    {
+      "name": "puppetlabs/mysql",
+      "version_requirement": ">= 2.0.0"
+    }
+  ],
+  "types": [
+
+  ],
+  "checksums": {
+    "Gemfile": "4d3bfca264d6846e0d70bcd50753cbd2",
+    "Gemfile.lock": "248b8cb61cade76a13318251d2b553eb",
+    "LICENSE": "2be177d469c9e2ca6b2b326b6624db47",
+    "Modulefile": "c8f569791365ec04c99cb477b39459d0",
+    "README.md": "b0c56aa69116e4aa00e1bf32cffd0744",
+    "Rakefile": "0c2e4c0d7cd1ddadf4eba12655488fa2",
+    "files/redmine-logrotate": "02d9fb9a474bac65f4ca068281641af3",
+    "manifests/config.pp": "007c7535f713f2ff90f60b44ec949fb1",
+    "manifests/database.pp": "3434a1bafb457272919b31e2fb86a646",
+    "manifests/init.pp": "202c4ddd2c68ab8d6ebf6c9c001a7b57",
+    "manifests/install.pp": "8cb92ff89ef09ea04ba2cfdc21cb2928",
+    "manifests/params.pp": "a2e34030ae3f6e01799c235e1b0142b0",
+    "manifests/rake.pp": "112993de51b792c03f0a7ef0ac332d0e",
+    "spec/classes/redmine/redmine_spec.rb": "73dbbaa03730f0ccd8ffebb70a8cd99c",
+    "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
+    "templates/configuration.yml.erb": "384caa40f5765d1170fed5255ea082f8",
+    "templates/database.yml.erb": "215f7a63ffc901e075d89054b20def9c",
+    "tests/init.pp": "9d0390401aa31b99934c2daaabc229a9"
+  }
+}

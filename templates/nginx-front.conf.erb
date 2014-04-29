@@ -1,0 +1,43 @@
+
+server {
+  # e.g., listen 192.168.1.1:80;
+  listen <%= @http_port %>;
+  server_name <%= @domain %>;
+  server_tokens off;
+  root /var/www;
+
+  # Increase this if you want to upload large attachments
+  # Or if you want to accept large git objects over http
+  client_max_body_size 20m;
+
+  # individual nginx logs for this gitlab vhost
+  access_log  /var/log/nginx/front_access.log;
+  error_log   /var/log/nginx/front_error.log;
+
+  location / {
+    # serve static files from defined root folder;.
+    # @gitlab is a named location for the upstream fallback, see below
+    try_files $uri $uri/index.html $uri.html;
+  }
+
+  location /gitlab/ {
+    proxy_redirect     off;
+    proxy_set_header   X-Forwarded-Proto $scheme;
+    proxy_set_header   Host              $http_host;
+    proxy_set_header   X-Real-IP         $remote_addr;
+    proxy_set_header   X-Forwarded-For   $proxy_add_x_forwarded_for;
+    proxy_pass http://gitlab;
+  }
+
+    location /redmine/ {
+    proxy_redirect     off;
+    proxy_set_header   X-Forwarded-Proto $scheme;
+    proxy_set_header   Host              $http_host;
+    proxy_set_header   X-Real-IP         $remote_addr;
+    proxy_set_header   X-Forwarded-For   $proxy_add_x_forwarded_for;
+    proxy_pass http://redmine;
+  }
+
+  error_page 502 /502.html;
+}
+
